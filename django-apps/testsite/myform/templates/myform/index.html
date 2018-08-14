@@ -1,0 +1,29 @@
+<html lang = "en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test environment</title>
+</head>
+<body>
+<h2>Test environment</h2>
+<form method ="post" action="/getdata/">
+  {% csrf_token %}
+    <!--<input type="hidden" name="csrf_protect" value=""/>-->
+    <table>
+        <tr>
+            <td>Enter your input: </td>
+            <td>{{form.post}}</td>
+        </tr>
+        <tr>
+            <td>
+
+
+            </td>
+            <td>
+                <button>Submit Form </button>
+            </td>
+        </tr>
+    </table>
+</form>
+<h2>{{form.post.value|safe}}</h2>
+</body>
+</html>
